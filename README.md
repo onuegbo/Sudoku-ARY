@@ -16,10 +16,11 @@ grille de sudoku
  */
 
 public class GrilleImp implements Grille {
-
+	 int [] [] grille;
+	int tailleGrille;
 	@Override
 	public  int getDimension() {
-		// TODO Auto-generated method stub
+		
 		int [] [] grille = new int [] []
 
 				
@@ -36,8 +37,7 @@ public class GrilleImp implements Grille {
 				{'@','@','@','@','@','@','@','@','@'},
 		 };
 
-		int tailleGrille = grille.length;
-		char [][] grilleValue = new char [9] [9];
+		tailleGrille = grille.length;
 
 		return tailleGrille;
 	}
