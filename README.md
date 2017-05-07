@@ -37,8 +37,7 @@ public class GrilleImp implements Grille {
 				{'@','@','@','@','@','@','@','@','@'},
 		 };
 
-		int tailleGrille = grille.length;
-		char [][] grilleValue = new char [9] [9];
+		tailleGrille = grille.length;
 
 		return tailleGrille;
 	}
