@@ -43,8 +43,12 @@ public class GrilleImp implements Grille {
 
 	@Override
 	public void setValue(int x, int y, char value)
-			throws IllegalArgumentException {
-		// TODO Auto-generated method stub
+		if ( x < 0 || x > 8 ) throw new IllegalArgumentException () ;
+		if ( y < 0 || y > 8 ) throw new IllegalArgumentException () ;
+		if ( value < 1 || value > 9 ) throw new IllegalArgumentException () ;
+		
+		grille[x][y]=value;
+	}
 
 	}
 
