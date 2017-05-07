@@ -16,10 +16,11 @@ grille de sudoku
  */
 
 public class GrilleImp implements Grille {
-
+	 int [] [] grille;
+	int tailleGrille;
 	@Override
 	public  int getDimension() {
-		// TODO Auto-generated method stub
+		
 		int [] [] grille = new int [] []
 
 				
