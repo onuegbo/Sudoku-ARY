@@ -55,8 +55,7 @@ public class GrilleImp implements Grille {
 
 	@Override
 	public char getValue(int x, int y) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return 0;
+		 return (char) grille [ x ] [ y ] ;
 	}
 
 	@Override
@@ -67,9 +66,13 @@ public class GrilleImp implements Grille {
 
 	@Override
 	public boolean possible(int x, int y, char value)
-			throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return false;
+		for (int i=0;i<tailleGrille;i++){
+		    for (int j=0;j<tailleGrille;j++){
+			if (grille[x][i]==value || grille[y][j]==value)
+				return false;
+		    }
+		}
+		return true;
 	}
 
 
