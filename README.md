@@ -60,9 +60,15 @@ public class GrilleImp implements Grille {
 
 	@Override
 	public boolean complete() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+        for (int i = 0; i < grille.length; i++) {
+            for (int j = 0; j < grille.length; j++) {
+                if (grille[i][j] == EMPTY) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
 	@Override
 	public boolean possible(int x, int y, char value)
