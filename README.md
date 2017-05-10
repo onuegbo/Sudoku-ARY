@@ -76,9 +76,9 @@ public class GrilleImp implements Grille {
             throw new IllegalArgumentException("L'un des index fournis est hors des bornes");
         }
 
-        if (!estAutorise(value)) {
-            throw new IllegalArgumentException("value n'est pas un caractere autorisé");
-        }
+        //if (!estAutorise(value)) {
+        //    throw new IllegalArgumentException("value n'est pas un caractere autorisé");
+       // }
 
         //Recherche d'une occurence du caractère dans la ligne
         for (int col = 0; col < grille.length; col++) {
