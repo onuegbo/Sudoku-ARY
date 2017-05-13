@@ -27,8 +27,10 @@ public class GrilleImpl implements Grille {
 
 	@Override
 	public char getValue(int x, int y) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-	  return (char) grille [ x ] [ y ] ;
+		  if (x < 0 || y < 0 || x >= grille.length || y >= grille.length) {
+            throw new IllegalArgumentException("Les valeurs ne correspond pas ");
+        }
+        return grille[x][y];
 	}
 
 	@Override
