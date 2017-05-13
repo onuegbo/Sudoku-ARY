@@ -44,12 +44,29 @@ public class GrilleImpl implements Grille {
 	        }
 	        return true;
 	}
+	
+	
+	private boolean Ispossible(char value) {
+        int i = 0;
+        while (i < grille.length) {
+            if (possible[i] == value) {
+                return true;
+            }
+            i++;
+        }
+        return false;
+    }
 
 	@Override
 	public boolean possible(int x, int y, char value) throws IllegalArgumentException {
 		 if (x < 0 || y < 0 || x >= grille.length || y >= grille.length) {
 	            throw new IllegalArgumentException("L'un des index fournis est hors des bornes");
 	        }
+			
+			
+			if (!Ispossible(value)) {
+            throw new IllegalArgumentException("value n'est pas un caractere autorisé");
+        }
 
 	        //Recherche d'une occurence du caractère dans la ligne
 	        for (int col = 0; col < grille.length; col++) {
